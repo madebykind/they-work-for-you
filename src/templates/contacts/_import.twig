@@ -1,0 +1,61 @@
+{% extends '_layouts/cp.twig' %}
+{% import '_includes/forms.twig' as forms %}
+
+{% set title = 'Import Contact Information'|t('_they-work-for-you') %}
+{% set fullPageForm = true %}
+
+{% set crumbs = [
+  {
+    label: 'They Work For You'|t('_they-work-for-you'),
+    url: url('_they-work-for-you'),
+  },
+  {
+    label: 'Contacts'|t('_they-work-for-you'),
+    url: url('they-work-for-you/contacts'),
+  },
+  {
+    label: 'Import'|t('_they-work-for-you'),
+    url: url('they-work-for-you/contacts/import'),
+  },
+] %}
+
+{% block mainFormAttributes %}
+    {{ parent() }}
+
+    enctype="multipart/form-data"
+{% endblock %}
+
+{% block content %}
+<p>Important: The file you upload must be a CSV file with the following columns: </p>
+<ul>
+    <li>'Forename'</li>
+    <li>'Surname'</li>
+    <li>'Name (Display As)'</li>
+    <li>'Name (List As)'</li>
+    <li>'Party'</li>
+    <li>'Constituency'</li>
+    <li>'Email'</li>
+    <li>'Address 1'</li>
+    <li>'Address 2'</li>
+    <li>'Postcode'</li>
+</ul>
+{# Have the form submit to a my-plugin/events/save controller action #}
+{{ actionInput('_they-work-for-you/contact/import') }}
+{{ csrfInput() }}
+  
+{# Have the save action redirect to /they-work-for-you/contacts afterward #}
+{{ redirectInput('they-work-for-you/contacts') }}
+
+{{ forms.fileField({
+    label: 'Contact File'|t('plugin-handle'),
+    instructions: 'The contact file to import'|t('_they-work-for-you'),
+    id: 'file',
+    name: 'file',
+    required: true,
+  }) }}
+
+<div class="alert alert-warning">
+    <p>Warning: This will overwrite any existing contact information.</p>
+</div>
+  
+{% endblock %}
