@@ -33,7 +33,7 @@ This plugin requires Craft CMS 4.7.0 or later, and PHP 8.0.2 or later.
 - `they-work-for-you/api/get-hansard`
 - `they-work-for-you/api/get-comments`
 
-All endpoints take the same parameters and provide the same responses as the official THeyWorkForYou API,, the only exception is `they-work-for-you/api/get-contact-details`
+All endpoints take the same parameters and provide the same responses as the official TheyWorkForYou API,, the only exception is `they-work-for-you/api/get-contact-details`
 
 ### `they-work-for-you/api/get-contact-details`
 
@@ -64,6 +64,5 @@ Example Response:
     "address_2": "London",
     "postcode": "SW1A 0AA"
   },
-  ...
 ]
 ```
