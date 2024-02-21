@@ -8,7 +8,7 @@ use craft\db\Migration;
 /**
  * m240209_111248_add_contacts_table migration.
  */
-class m240209_111248_add_contacts_table extends Migration
+class Install extends Migration
 {
     public string $tableName = '{{%twfy_contacts}}';
     /**

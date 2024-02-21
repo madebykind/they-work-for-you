@@ -4,7 +4,7 @@ They Work For You API
 
 ## Requirements
 
-This plugin requires Craft CMS 4.7.0 or later, and PHP 8.0.2 or later.
+This plugin requires Craft CMS 3.7.23 | 4.7.0 or later, and PHP 8.0.2 or later.
 
 ## Endpoints
 
