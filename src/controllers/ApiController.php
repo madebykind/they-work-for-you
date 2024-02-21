@@ -16,7 +16,7 @@ class ApiController extends Controller
     private TheyWorkForYouClient $client;
     private Settings $settings;
 
-    protected array|bool|int $allowAnonymous = true;
+    protected $allowAnonymous = true;
 
     public function __construct($id, $module, $config = [])
     {

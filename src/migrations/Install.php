@@ -30,6 +30,7 @@ class Install extends Migration
             'address_1' => $this->string()->defaultValue(''),
             'address_2' => $this->string()->defaultValue(''),
             'postcode' => $this->string()->defaultValue(''),
+            'uid' => $this->string()->defaultValue(''),
         ]);
 
         $this->createIndexWrapper($this->tableName, 'forename');
