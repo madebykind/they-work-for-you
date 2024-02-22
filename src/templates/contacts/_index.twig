@@ -3,11 +3,11 @@
 
 {% set crumbs = [
   {
-    label: 'They Work For You'|t('_they-work-for-you'),
-    url: url('_they-work-for-you'),
+    label: 'They Work For You'|t('they-work-for-you'),
+    url: url('they-work-for-you'),
   },
   {
-    label: 'Contacts'|t('_they-work-for-you'),
+    label: 'Contacts'|t('they-work-for-you'),
     url: url('they-work-for-you/contacts'),
   },
 ] %}
@@ -16,18 +16,18 @@
     {{ tag('a', {
         class: 'btn submit add icon',
         href: url('they-work-for-you/contacts/import'),
-        text: 'Import Contacts'|t('_they-work-for-you'),
+        text: 'Import Contacts'|t('they-work-for-you'),
     }) }}
 {% endblock %}
 
 {% block content %}
     <table id="contacts" class="data fullwidth collapsible">
         <thead>
-            <th scope="col">{{ "Forename"|t('_they-work-for-you') }}</th>
-            <th scope="col">{{ "Surname"|t('_they-work-for-you') }}</th>
-            <th scope="col">{{ "Party"|t('_they-work-for-you') }}</th>
-            <th scope="col">{{ "Constituency"|t('_they-work-for-you') }}</th>
-            <th scope="col">{{ "Email"|t('_they-work-for-you') }}</th>
+            <th scope="col">{{ "Forename"|t('they-work-for-you') }}</th>
+            <th scope="col">{{ "Surname"|t('they-work-for-you') }}</th>
+            <th scope="col">{{ "Party"|t('they-work-for-you') }}</th>
+            <th scope="col">{{ "Constituency"|t('they-work-for-you') }}</th>
+            <th scope="col">{{ "Email"|t('they-work-for-you') }}</th>
         </thead>
         <tbody>
             {% for contact in contacts %}

@@ -1,12 +1,12 @@
 
 {% import '_includes/forms.html' as forms %}
 
-    <h2 class="first">{{ "Control Panel"|t('_they-work-for-you') }}</h2>
+    <h2 class="first">{{ "Control Panel"|t('they-work-for-you') }}</h2>
 
     {{ forms.textField({
             class: "code",
-            label: "API URL"|t('_they-work-for-you'),
-            instructions: "Enter your API URL here.."|t('_they-work-for-you'),
+            label: "API URL"|t('they-work-for-you'),
+            instructions: "Enter your API URL here.."|t('they-work-for-you'),
             id: "apiUrl",
             name: "apiUrl",
             value: settings.apiUrl,
@@ -15,8 +15,8 @@
 
     {{ forms.textField({
             class: "code",
-            label: "API key"|t('_they-work-for-you'),
-            instructions: "Enter your API Key here.."|t('_they-work-for-you'),
+            label: "API key"|t('they-work-for-you'),
+            instructions: "Enter your API Key here.."|t('they-work-for-you'),
             id: "apiKey",
             name: "apiKey",
             value: settings.apiKey,

@@ -30,7 +30,7 @@ class ContactController extends Controller
     public function actionIndex(): mixed
     {
         $contacts = ContactModel::find()->all();
-        return $this->renderTemplate('_they-work-for-you/contacts/_index', [
+        return $this->renderTemplate('they-work-for-you/contacts/_index', [
             'contacts' => $contacts,
         ]);
     }

@@ -1,20 +1,20 @@
 {% extends '_layouts/cp.html' %}
 {% import '_includes/forms.html' as forms %}
 
-{% set title = 'Import Contact Information'|t('_they-work-for-you') %}
+{% set title = 'Import Contact Information'|t('they-work-for-you') %}
 {% set fullPageForm = true %}
 
 {% set crumbs = [
   {
-    label: 'They Work For You'|t('_they-work-for-you'),
-    url: url('_they-work-for-you'),
+    label: 'They Work For You'|t('they-work-for-you'),
+    url: url('they-work-for-you'),
   },
   {
-    label: 'Contacts'|t('_they-work-for-you'),
+    label: 'Contacts'|t('they-work-for-you'),
     url: url('they-work-for-you/contacts'),
   },
   {
-    label: 'Import'|t('_they-work-for-you'),
+    label: 'Import'|t('they-work-for-you'),
     url: url('they-work-for-you/contacts/import'),
   },
 ] %}
@@ -44,7 +44,7 @@
     The latest files can be downloaded from <a href="https://www.parliament.uk/site-information/freedom-of-information/information-we-already-publish/house-of-commons-publication-scheme/members-and-members-staff/parliamentary-contact-details-for-mps/">here</a>.
 </p>
 {# Have the form submit to a my-plugin/events/save controller action #}
-{{ actionInput('_they-work-for-you/contact/import') }}
+{{ actionInput('they-work-for-you/contact/import') }}
 {{ csrfInput() }}
   
 {# Have the save action redirect to /they-work-for-you/contacts afterward #}
@@ -52,7 +52,7 @@
 
 {{ forms.fileField({
     label: 'Contact File'|t('plugin-handle'),
-    instructions: 'The contact file to import'|t('_they-work-for-you'),
+    instructions: 'The contact file to import'|t('they-work-for-you'),
     id: 'file',
     name: 'file',
     required: true,
