@@ -490,7 +490,7 @@ class ApiController extends Controller
      */
     protected function validateRequest(): void
     {
-        $this->requirePostRequest();
+        // $this->requirePostRequest();
         $this->requireAcceptsJson();
     }
 }
